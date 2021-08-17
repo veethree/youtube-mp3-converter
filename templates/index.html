@@ -24,12 +24,15 @@
 		</script>
 
 		{% if state == "valid_link" %}
-			<h2 class="text-light">{{ video.title }}</h2>
-			<img src="{{ video.thumbnail_url }}" class="img-fluid img-thumbnail w-50 h-50">
-			<br>
-			<a class="btn btn-primary btn-lg" href="{{ download_url }}" role="button" download>Download</a>
+			˚<!-- DOWNLOAD PAGE -->
+			<div class="d-grid gap-2 col-10 mx-auto">
+				<p class="text-light">"<b>{{ video.title }}</b>"</p>
+				<img style="margin: auto;" src="{{ video.thumbnail_url }}" class="img-fluid">
+				<a class="btn btn-lg bg-color" href="{{ download_url }}" role="button" download>Download</a>
+			</div>
 
 		{% else %}
+			<!-- INDEX PAGE -->
 			{% if state == "invalid_link" %}
 				<p id = "error" class="text-danger">Invalid Link!</p>
 			{% endif %}
@@ -37,7 +40,7 @@
 			<form style="margin:auto; width:80%" action="/" method="post">
 			  <div class="form-group d-flex justify-content-center">
 			    <input name="url" type="text" class="form-control" placeholder="Paste your link here">
-			    <button id="convert_button" onclick="convert_clicked()"type="submit" class="btn btn-primary">Convert</button>
+			    <button id="convert_button" onclick="convert_clicked()"type="submit" class="btn bg-color">Convert</button>
 			  </div>
 			</form>
 

@@ -1,0 +1,15 @@
+:root {
+	--accentcolor: #e6a939;
+}
+
+.fg-color {
+	color: var(--accentcolor);
+}
+
+.bg-color {
+	background-color: var(--accentcolor);
+}
+
+a:hover {
+	color: var(--accentcolor);
+}
